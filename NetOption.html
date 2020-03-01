@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Transfer Lreaning web home</title>
+</head>
+<body>
+	
+	<!--下拉式選單。-->
+	<form action="alexnet.php" method="post">
+		<p>MiniBatchSize: <input type="text" name="MiniBatchSize" value="64" /></p>
+		<p>MaxEpochs: <input type="text" name="MaxEpochs" value="10" /></p>
+		<p>InitialLearnRate: <input type="text" name="InitialLearnRate" value="0.001" /></p>
+		<p>ValidationData: <input type="text" name="ValidationData" value="0.8" /></p>
+		<p>ValidationFrequency: <input type="text" name="ValidationFrequency" value="5" /></p>
+		<p>Time: <input type="text" name="Time" value="1" /></p>
+		<p> solver:
+			<select name="solver">
+				<option value="sgdm">sgdm</option>
+				<option value="adam">adam</option>
+				<option value="rmsprop">rmsprop</option>
+				...
+			</select>
+			Verbose:
+			<select name="Verbose">
+				<option value="1">true</option>
+				<option value="0">false</option>
+				...
+			</select>
+			Plots:
+			<select name="Plots">
+				<option value="training-progress">training-progress</option>
+				<option value="none">none</option>
+				...
+			</select>
+			environment:
+			<select name="environment">
+				<option value="auto">auto</option>
+				<option value="gpu">gpu</option>
+				<option value="cpu">cpu</option>
+				<option value="multi-gpu">multi-gpu</option>
+				...
+			</select>
+			Shuffle:
+			<select name="Shuffle">
+				<option value="once">once</option>
+				<option value="never">never</option>
+				<option value="every-epoch">every-epoch</option>
+				...
+			</select>
+		</p>
+		<p>
+			tranfer lreain:
+			<select name="transfer">
+				<option value="1">true</option>
+				<option value="0">false</option>
+				...
+			</select>
+			Data Augmenter:
+			<select name="Augmenter">
+				<option value="0">false</option>
+				<option value="1">true</option>
+				...
+			</select>
+		</p>
+		<input type="submit" value="Submit" />
+	</form>
+</body>
+</html>
